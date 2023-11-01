@@ -70,7 +70,7 @@ html {
 
 .nav-link {
     color: white !important;
-    font-size: 17px;
+    font-size: max(1vw, 10px);
     font-weight: inherit;
     font-family: 'roboto', sans-serif;
 }
