@@ -107,7 +107,7 @@ html {
 .grid {
     display: flex !important;
     flex-wrap: wrap;
-    flex: 1;
+    flex: 2;
     justify-content: center;
     align-items: center;
     gap: 150px;
@@ -118,26 +118,13 @@ html {
 
 .grid>div {
     max-width: 400px;
-    min-width: 25%;
     max-height: 417px;
     min-height: 25%;
 }
 
-.grid .chappinco {
-    background-color: black;
-}
-
-.grid .imageDownload {
-    background-color: orange;
-}
-
-.grid .video {
-    background-color: purple;
-}
-
 .container {
-    max-width: 1800px;
-    max-height: 1000px;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .profiles {
@@ -145,7 +132,7 @@ html {
     max-height: 417px;
     padding: 10px;
     border-radius: 10px;
-    max-width: 100%;
+    max-width: 400px;
 }
 
 .profile {
@@ -191,9 +178,9 @@ html {
 
 .message {
     width: 100%;
-    min-width: 30px;
     max-height: 417px;
     min-height: 50%;
+    max-width: 400px;
     border: 1px solid #787878;
     padding: 10px;
     border-radius: 10px;
@@ -202,11 +189,132 @@ html {
 
 .rule {
     width: 100%;
+    height: 417px;
     min-width: 30px;
     max-height: 417px;
     min-height: 50%;
     border: 1px solid #787878;
-    padding: 10px;
     border-radius: 10px;
     padding: 20px;
 }
+
+.rule-container {
+    display: grid;
+    grid-template-columns: 1fr 0.4fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+
+
+.ruleInputs {
+    height: 50px;
+    width: 100%;
+    min-width: 50px;
+    border-radius: 10px;
+    border-color: #787878;
+}
+
+.ruleInputs::placeholder {
+    color: rgb(179, 179, 179);
+    font-family: 'roboto', sans-serif;
+}
+
+.ruleBars {
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    font-size: 20px;
+    margin: 25px 0px 25px 0px;
+}
+
+.imageGrid {
+    max-width: 400px;
+    max-height: 417px;
+    cursor: pointer;
+    width: 100%;
+    height: 417px;
+    border: 1px solid #787878;
+    border-radius: 10px;
+    transition: transform 10s ease;
+}
+
+.modal-line {
+    border: 1px solid #000000;
+    margin: 80px 0;
+    /* Ajuste a margem conforme necessário */
+}
+
+.modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    height: 90%;
+    min-width: 20%;
+    min-height: 20%;
+    max-width: 1200px;
+    max-height: 800px;
+    aspect-ratio: 1 / 1;
+    overflow: auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #787878;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.modal-content {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 35%;
+    transform: translateY(-50%);
+    max-width: 80%;
+    max-height: 70%;
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.close:hover,
+.close:focus {
+    color: #ccc;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+.imageModal {}
+
+.imageDownload {
+    max-width: 400px;
+    max-height: 417px;
+
+}
+
+.video {
+    max-width: 400px;
+    max-height: 417px;
+    max-width: 100%;
+
+        position: relative;
+        border: 1px solid #787878;
+        border-radius: 10px;
+        overflow: hidden;
+}
+    .zoom-container {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
