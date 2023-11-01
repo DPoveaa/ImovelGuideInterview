@@ -18,7 +18,7 @@ html {
 
 .navbar-bottom {
     background-color: #1B2653;
-    padding-bottom: 0px;
+    padding-bottom: 0px !important;
     max-height: 60px;
     min-height: 50px;
 }
@@ -39,6 +39,15 @@ html {
     color: rgb(179, 179, 179);
     font-family: 'roboto', sans-serif;
 }
+
+.nav-link-bottom {
+    color: white !important;
+    font-size: max(1vw, 10px);
+    font-weight: inherit;
+    font-family: 'roboto', sans-serif;
+    text-decoration: none;
+}
+
 
 .teste {
     text-indent: 20px;
@@ -114,12 +123,6 @@ html {
     min-height: 25%;
 }
 
-.grid .message {}
-
-.grid .rule {
-    background-color: red;
-}
-
 .grid .chappinco {
     background-color: black;
 }
@@ -160,6 +163,7 @@ html {
 }
 
 .profileName {
+    color: #1B2653;
     font-size: 30px;
     font-family: 'roboto', sans-serif;
 }
@@ -186,6 +190,17 @@ html {
 }
 
 .message {
+    width: 100%;
+    min-width: 30px;
+    max-height: 417px;
+    min-height: 50%;
+    border: 1px solid #787878;
+    padding: 10px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.rule {
     width: 100%;
     min-width: 30px;
     max-height: 417px;

@@ -82,34 +82,48 @@
         <input class="inputInstructions" type="text" id="phoneInput" placeholder="Digite seu telefone">
         <input class="teste" type="text" id="messageInput" name="textMessage" placeholder="Digite o assunto"
           style="height: 130px; white-space: pre-line; overflow: hidden;">
-        <button class="inputInstructions" type="button" id="sendingMessage"
-          style="margin-top: 15px; width: 180px; height: 40px; background-color: #FE6613; color: white;">
+        <button type="button" id="sendingMessage"
+          style="border-radius: 10px; margin-top: 15px; width: 180px; height: 40px; background-color: #FE6613; color: white;">
           Enviar mensagem</button>
       </div>
-      <div class="rule"></div>
+      <div class="rule">
+        <h1  style="color: #1B2653">Calculadora Regra de 3</h1>
+        <div class="container" style="height: fit-content;">
+          <input type="number" id="num1" placeholder="Primeiro número">
+          <input type="number" id="num2" placeholder="Segundo número">
+          <input type="number" id="num3" placeholder="Terceiro número">
+        </div>
+        <div class="buttons">
+          <button id="calcular"style="border-radius: 10px; margin-top: 15px; width: 180px; height: 40px; background-color: #FE6613; color: white;">Calcular</button>
+        </div>
+        <div class="result">
+          <p id="result">Resultado</p>
+        </div>
+      </div>
       <div class="chappinco"></div>
       <div class="imageDownload"></div>
       <div class="video"></div>
     </div>
   </div>
-  <nav class="navbar fixed-bottom bg-body-tertiary" style="padding: 0px;">
+  
+  <nav class="navbar fixed-bottom bg-body-tertiary" style="margin-bottom: 0px; padding-bottom: 0px;">
     <div class="container-fluid navbar-bottom">
-      <li class="nav-item-bottom textNav ">
-        <a class="nav-link" href="#">Planos</a>
-      </li>
-      <li class="nav-item-bottom textNav ">
-        <a class="nav-link" href="#">Planos</a>
-      </li>
-      <li class="nav-item-bottom textNav ">
-        <a class="nav-link" href="#">Planos</a>
-      </li>
-      <li class="nav-item-bottom textNav ">
-        <a class="nav-link" href="#">Planos</a>
-      </li>
-      <img src="./assets/images/Logo.png" width="10%" height="10%"
-        style="padding-right: 40px; min-height: 60px; min-width: 170px;">
+      <div class="d-flex justify-content-between align-items-center" style="width: 100%; height: 100%;">
+        <div class="d-flex align-items-center" style="justify-content: flex-end; margin-left: 100px;">
+          <a class="nav-link-bottom" href="#" style="justify-content: flex-start;">Termos</a>
+          <a class="nav-link-bottom" href="#" style="margin-left: 30px;">Contatos</a>
+          <a class="nav-link-bottom" href="#" style="margin-left: 30px; margin-right: 30px;">Sobre</a>
+        </div>
+        <div class="d-flex align-items-center" style="justify-content: flex-end; margin-right: 50px;">
+          <a class="nav-link-bottom" href="#" style="margin-right: 50px;">© Copyright 2022. Todos os direitos
+            reservados.</a>
+          <img src="./assets/images/Logo.png" height="8%"
+            style="min-height: 10px; min-width: 40px; max-height: 40px; margin-right: 20px;">
+        </div>
+      </div>
     </div>
   </nav>
+
 </body>
 <script>
 
@@ -215,6 +229,27 @@
       }
     }
   }
+
+  //#endregion
+
+  //#region regra de 3
+
+  const num1 = document.querySelector("#num1");
+const num2 = document.querySelector("#num2");
+const num3 = document.querySelector("#num3");
+const resultado = document.querySelector("#result");
+
+const calcular = () => {
+  const x = num1.value;
+  const y = num2.value;
+  const z = num3.value;
+
+  const resultadoCalculado = (x * z) / y;
+
+  resultado.textContent = resultadoCalculado;
+};
+
+document.querySelector("#calcular").addEventListener("click", calcular);
 
   //#endregion
 
