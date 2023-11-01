@@ -1,0 +1,197 @@
+html {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.backgroundColorNav {
+    background-color: #1B2653;
+    color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(245,245,245, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0,0,0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar-bottom {
+    background-color: #1B2653;
+    padding-bottom: 0px;
+    max-height: 60px;
+    min-height: 50px;
+}
+
+.inputInstructions {
+    text-indent: 20px;
+    max-width: 100%;
+    width: 400px;
+    max-height: 100%;
+    margin-top: 25px;
+    border-radius: 10px;
+    height: 50px;
+    font-family: 'roboto', sans-serif;
+    border-color: rgb(179, 179, 179);
+}
+
+.inputInstructions::placeholder {
+    color: rgb(179, 179, 179);
+    font-family: 'roboto', sans-serif;
+}
+
+.teste {
+    text-indent: 20px;
+    padding-bottom: 80px;
+    max-width: 100%;
+    width: 400px;
+    min-width: 10%;
+    max-height: 100%;
+    margin-top: 25px;
+    border-radius: 10px;
+    height: 50px;
+    font-family: 'roboto', sans-serif;
+    border-color: rgb(179, 179, 179);
+}
+
+.teste::placeholder {
+    color: rgb(179, 179, 179);
+    font-family: 'roboto', sans-serif;
+}
+
+.nav-link {
+    color: white !important;
+    font-size: 17px;
+    font-weight: inherit;
+    font-family: 'roboto', sans-serif;
+}
+
+.nav-link:hover {
+    color: rgb(146, 145, 145) !important;
+}
+
+.btn.btn-outline-success.button:hover {
+    color: whitesmoke;
+    background-color: #FE6613;
+    border-color: whitesmoke;
+    border-color: #b94a0e;
+}
+
+.btn.btn-outline-success.button:active {
+    color: whitesmoke;
+    background-color: #111835;
+    border-color: whitesmoke;
+}
+
+.btn-sign-in {
+    color: white;
+    border-color: white;
+    height: 40px;
+    width: 170px;
+    border-radius: 100px;
+    border-width: 2px;
+    font-weight: inherit;
+    font-family: 'roboto', sans-serif;
+
+}
+
+.grid {
+    display: flex !important;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    width: 100%;
+    height: 100%;
+    padding-top: 100px;
+}
+
+.grid>div {
+    max-width: 400px;
+    min-width: 25%;
+    max-height: 417px;
+    min-height: 25%;
+}
+
+.grid .message {}
+
+.grid .rule {
+    background-color: red;
+}
+
+.grid .chappinco {
+    background-color: black;
+}
+
+.grid .imageDownload {
+    background-color: orange;
+}
+
+.grid .video {
+    background-color: purple;
+}
+
+.container {
+    max-width: 1800px;
+    max-height: 1000px;
+}
+
+.profiles {
+    border: 1px solid #787878;
+    max-height: 417px;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+.profile {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px #787878;
+}
+
+.profileText {
+    margin-left: 5%;
+    font-family: 'roboto', sans-serif;
+}
+
+.profileName {
+    font-size: 30px;
+    font-family: 'roboto', sans-serif;
+}
+
+.profileImages {
+    border-radius: 10px;
+    border: 10px #787878;
+    width: fit-content;
+    height: fit-content;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+.fone {
+    cursor: pointer;
+    text-decoration: underline;
+    display: inline-block;
+    border: none;
+    background: none;
+    font-size: inherit;
+    padding: 0;
+    margin: 0;
+    color: red;
+}
+
+.message {
+    width: 100%;
+    min-width: 30px;
+    max-height: 417px;
+    min-height: 50%;
+    border: 1px solid #787878;
+    padding: 10px;
+    border-radius: 10px;
+    padding: 20px;
+}

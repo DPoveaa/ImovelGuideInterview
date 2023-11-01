@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imovel Guide</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" media="screen">
+</head>
+
+<body>
+  <script src="script.js"></script>
+  <nav class="navbar navbar-expand-lg navbar-light backgroundColorNav" style="padding: 8px 10px 12px;">
+    <div class="container-fluid">
+      <img src="./assets/images/Logo.png" width="10%" height="10%"
+        style="padding-right: 40px; min-height: 60px; min-width: 170px;">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item textNav ">
+            <a class="nav-link" href="#">Condomínios</a>
+          </li>
+          <li class="nav-item textNav ">
+            <a class="nav-link" href="#">Fórum</a>
+          </li>
+          <li class="nav-item textNav ">
+            <a class="nav-link" href="#">Guia</a>
+          </li>
+          <li class="nav-item textNav ">
+            <a class="nav-link" href="#">Artigos</a>
+          </li>
+          <li class="nav-item textNav ">
+            <a class="nav-link" href="#">Ferramentas</a>
+          </li>
+          <li class="nav-item textNav ">
+            <a class="nav-link" href="#" style="padding-left: 800px;">Cotar Imóvel</a>
+          </li>
+          <li class="nav-item textNav ">
+            <a class="nav-link" href="#">Planos</a>
+          </li>
+          <li class="nav-item textNav ">
+            <a class="nav-link" href="#">Entrar</a>
+          </li>
+        </ul>
+        <form class="d-flex" style="padding-right: 50px;" role="search">
+          <button class="btn btn-outline-success button btn-sign-in" type="submit">CADASTRE-SE</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="grid">
+      <div class="profiles" style="min-height: 10%;
+      min-width: 10%;">
+        <div class="profile" style="padding-left: 5px;">
+          <img src="./assets/images/image1.jpg" class="profileImages" alt="Profile image 1">
+          <div class="profileText">
+            <h2 class="profileName">Nome Corretora 1</h2>
+            <p>3.000 pontos</p>
+            <div class="fone" id="fone1" onclick="clicked_on(1,document.getElementById('fone1'))">Ver telefone</div>
+          </div>
+        </div>
+        <div class="profile" style="padding-top: 15px">
+          <img src="./assets/images/image2.jpg" class="profileImages" alt="Profile image 2">
+          <div class="profileText" style="padding-right: 18px;">
+            <h2 class="profileName">Nome Corretor 2</h2>
+            <p>1.260 pontos</p>
+            <div class="fone" id="fone2" onclick="clicked_on(2,document.getElementById('fone2'))">Ver telefone</div>
+          </div>
+        </div>
+      </div>
+      <div class="message">
+        <h2 style="color: #1B2653;">Mande uma mensagem:</h2>
+        <input class="inputInstructions" type="text" id="CPF" name="CPFInput" placeholder="Digite seu CPF"
+          style="margin-top: 5px;">
+        <input class="inputInstructions" type="text" id="phoneInput" placeholder="Digite seu telefone">
+        <input class="teste" type="text" id="messageInput" name="textMessage" placeholder="Digite o assunto"
+          style="height: 130px; white-space: pre-line; overflow: hidden;">
+        <button class="inputInstructions" type="button" id="sendingMessage"
+          style="margin-top: 15px; width: 180px; height: 40px; background-color: #FE6613; color: white;">
+          Enviar mensagem</button>
+      </div>
+      <div class="rule"></div>
+      <div class="chappinco"></div>
+      <div class="imageDownload"></div>
+      <div class="video"></div>
+    </div>
+  </div>
+  <nav class="navbar fixed-bottom bg-body-tertiary" style="padding: 0px;">
+    <div class="container-fluid navbar-bottom">
+      <li class="nav-item-bottom textNav ">
+        <a class="nav-link" href="#">Planos</a>
+      </li>
+      <li class="nav-item-bottom textNav ">
+        <a class="nav-link" href="#">Planos</a>
+      </li>
+      <li class="nav-item-bottom textNav ">
+        <a class="nav-link" href="#">Planos</a>
+      </li>
+      <li class="nav-item-bottom textNav ">
+        <a class="nav-link" href="#">Planos</a>
+      </li>
+      <img src="./assets/images/Logo.png" width="10%" height="10%"
+        style="padding-right: 40px; min-height: 60px; min-width: 170px;">
+    </div>
+  </nav>
+</body>
+<script>
+
+  document.getElementById('messageInput').addEventListener('input', function () {
+    this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);
+  });
+
+
+  //#region Numero do CPF
+
+  function getDigitOnlyCPF(value) {
+    return value.toString().replace(/\D/g, '').substring(0, 11);
+  }
+
+  function getFormattedCPF(value) {
+    if (!value) return '';
+
+    const cpf = getDigitOnlyCPF(value);
+    const firstPart = cpf.substring(0, 3);
+    const secondPart = cpf.substring(3, 6);
+    const thirdPart = cpf.substring(6, 9);
+    const fourthPart = cpf.substring(9, 11);
+
+    let formattedCPF = `${firstPart}.${secondPart}.${thirdPart}-${fourthPart}`;
+
+    return formattedCPF;
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const cpfInput = document.getElementById('CPF');
+
+    cpfInput.addEventListener('input', function (e) {
+      const cpf = getDigitOnlyCPF(e.target.value);
+      const formattedCPF = getFormattedCPF(cpf);
+
+      e.target.value = formattedCPF;
+    });
+  });
+
+  //#endregion
+
+  //#region Numero de telefone
+  function getDigitOnlyPhone(value) {
+    return value.toString().replace(/\D/g, '').substring(0, 11);
+  }
+
+  function getFormattedPhone(value) {
+    if (!value) return '';
+
+    const phone = getDigitOnlyPhone(value);
+    const areaCode = phone.substring(0, 2);
+    const middle = phone.substring(2, 7);
+    const last = phone.substring(7, 11);
+
+    let formattedPhone = '';
+    if (phone.length > 6) {
+      formattedPhone = `(${areaCode}) ${middle} - ${last}`;
+    } else if (phone.length > 2) {
+      formattedPhone = `(${areaCode}) ${middle}`;
+    } else if (phone.length > 0) {
+      formattedPhone = `(${areaCode}`;
+    }
+
+    return formattedPhone;
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const phoneInput = document.getElementById('phoneInput');
+
+    phoneInput.addEventListener('input', function (e) {
+      const phone = getDigitOnlyPhone(e.target.value);
+      const formattedPhone = getFormattedPhone(phone);
+
+      e.target.value = formattedPhone;
+    });
+  });
+  //#endregion
+
+  //#region Mostra ou esconde número de telefone
+
+  var button1Showing = false;
+  var button2Showing = false;
+
+  function clicked_on(button, element) {
+
+    if (button === 1) {
+      if (button1Showing) {
+        element.innerHTML = 'Ver telefone';
+        button1Showing = false;
+      } else {
+        element.innerHTML = '(11) 94002-8922';
+        button1Showing = true;
+      }
+    }
+
+    if (button === 2) {
+      if (button2Showing) {
+        element.innerHTML = 'Ver telefone';
+        button2Showing = false;
+      } else {
+        element.innerHTML = '(11) 99810-5896';
+        button2Showing = true;
+      }
+    }
+  }
+
+  //#endregion
+
+</script>
