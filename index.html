@@ -126,7 +126,7 @@
 
       <div class="imageDownload" onclick="capturarConteudo()">
         <img src="./assets/images/Image3.png" class="imageGrid">
-        <button type="button" id="openModalButton"
+        <button type="button" id="openModalButton" onclick="downloadImagem()"
         style="border-radius: 10px; margin-top: 15px; width: 60%; height: 40px; background-color: #FE6613; color: white; display: block; margin-left: auto; margin-right: auto;">
         Download
       </button>      
@@ -172,23 +172,26 @@
 
   //#region imageDownload
 
-      /*  !!ATENÇÃO!!
-      Em relação ao download da imagem infelizmente não consegui a tempo, boa parte do site eu aprendi na hora e
-      botei na pratica, por este motivo o download não consegui integrar*/
+  function downloadImagem() {
+        // URL da imagem que você deseja baixar
+        var imageUrl = "./assets/images/Image3.png";
 
-  function capturarConteudo() {
-    // Verifica se a função está sendo chamada
-    console.log("A função capturarConteudo() está sendo chamada!");
+        // Nome desejado para o arquivo baixado
+        var nomeArquivo = "Imagem_Teste.png";
 
-    // Cria um canvas a partir do elemento div
-    const canvas = html2canvas(document.querySelector(".imageDownload"));
+        // Utiliza o fetch para baixar a imagem
+        fetch(imageUrl)
+            .then(response => response.blob())
+            .then(blob => {
+                // Cria um link temporário para o arquivo blob
+                var link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                link.download = nomeArquivo;
 
-    // Converte o canvas em uma imagem PNG
-    const imagemPNG = canvas.toDataURL("image/png");
-
-    // Baixa a imagem para o computador do usuário
-    downloadFile(imagemPNG, "imagem.png");
-  }
+                // Simula um clique no link para iniciar o download
+                link.click();
+            });
+    }
 
   //#endregion
 
